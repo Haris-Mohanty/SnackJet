@@ -22,7 +22,7 @@ const Register = () => {
 
   return (
     <>
-      <div className="bg-gray-50 font-[sans-serif]">
+      <div className="bg-gray-50 font-[sans-serif] dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center py-4 px-4">
           <div className="max-w-md w-full">
             <div className="p-6 md:p-8 rounded-2xl bg-white shadow-lg">
