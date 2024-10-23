@@ -1,14 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const Login = () => {
+  const [data, setData] = useState({ email: "", password: "" });
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  // Form Submit
+  const handleLogin = (e) => {
+    e.preventDefault();
+    console.log("Login data:", data);
+  };
+
   return (
     <>
-      <div class="bg-gray-50 font-[sans-serif]">
-        <div class="flex flex-col items-center justify-center py-6 px-4">
-          <div class="max-w-md w-full">
-            <div class="p-10 rounded-2xl bg-white shadow-lg">
+      <div className="bg-gray-50 font-[sans-serif]">
+        <div className="flex flex-col items-center justify-center py-6 px-4">
+          <div className="max-w-md w-full">
+            <div className="p-6 md:p-10 rounded-2xl bg-white shadow-lg">
               <Link href="/">
                 <Image
                   src={"/logo.png"}
@@ -18,88 +35,101 @@ const Login = () => {
                   className="mb-8 mx-auto block"
                 />
               </Link>
-              <h2 class="text-gray-700 text-center text-2xl font-bold">
+              <h2 className="text-gray-600 text-center text-2xl font-bold">
                 Login Form
               </h2>
-              <form class="mt-8 space-y-4">
+              <form onSubmit={handleLogin} className="mt-4 md:mt-8 space-y-4">
                 <div>
-                  <label class="text-gray-800 text-sm mb-2 block">Email</label>
-                  <div class="relative flex items-center">
+                  <label className="text-gray-800 text-sm mb-2 block">
+                    Email
+                  </label>
+                  <div className="relative flex items-center">
                     <input
                       name="email"
                       type="text"
                       required
-                      class="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
+                      className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
                       placeholder="Enter Email"
+                      value={data.email}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label class="text-gray-800 text-sm mb-2 block">
+                  <label className="text-gray-800 text-sm mb-2 block">
                     Password
                   </label>
-                  <div class="relative flex items-center">
+                  <div className="relative flex items-center">
                     <input
                       name="password"
-                      type="password"
+                      type={showPassword ? "text" : "password"}
                       required
-                      class="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
+                      className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
                       placeholder="Enter password"
+                      value={data.password}
+                      onChange={handleChange}
                     />
                     <svg
+                      onClick={togglePasswordVisibility}
                       xmlns="http://www.w3.org/2000/svg"
                       fill="#bbb"
                       stroke="#bbb"
-                      class="w-4 h-4 absolute right-4 cursor-pointer"
+                      className="w-4 h-4 absolute right-4 cursor-pointer"
                       viewBox="0 0 128 128"
+                      aria-label={
+                        showPassword ? "Hide password" : "Show password"
+                      }
                     >
-                      <path
-                        d="M64 104C22.127 104 1.367 67.496.504 65.943a4 4 0 0 1 0-3.887C1.367 60.504 22.127 24 64 24s62.633 36.504 63.496 38.057a4 4 0 0 1 0 3.887C126.633 67.496 105.873 104 64 104zM8.707 63.994C13.465 71.205 32.146 96 64 96c31.955 0 50.553-24.775 55.293-31.994C114.535 56.795 95.854 32 64 32 32.045 32 13.447 56.775 8.707 63.994zM64 88c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm0-40c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16z"
-                        data-original="#000000"
-                      ></path>
+                      {showPassword ? (
+                        // Eye-slash icon for hiding password
+                        <path d="M64 104C22.127 104 1.367 67.496.504 65.943a4 4 0 0 1 0-3.887C1.367 60.504 22.127 24 64 24s62.633 36.504 63.496 38.057a4 4 0 0 1 0 3.887C126.633 67.496 105.873 104 64 104zM64 80c13.234 0 24-10.766 24-24s-10.766-24-24-24-24 10.766-24 24 10.766 24 24 24zm38.293-6.994c-4.76-7.219-23.441-32.004-55.293-32.004C32.045 32 13.447 56.775 8.707 63.994c4.76 7.219 23.441 32.004 55.293 32.004C95.854 96 114.535 71.205 102.293 73.006zM64 40c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16z" />
+                      ) : (
+                        // Eye icon for showing password
+                        <path d="M64 104C22.127 104 1.367 67.496.504 65.943a4 4 0 0 1 0-3.887C1.367 60.504 22.127 24 64 24s62.633 36.504 63.496 38.057a4 4 0 0 1 0 3.887C126.633 67.496 105.873 104 64 104zm0-8c13.234 0 24-10.766 24-24s-10.766-24-24-24-24 10.766-24 24 10.766 24 24 24zm0-40c8.822 0 16 7.178 16 16s-7.178 16-16 16-16-7.178-16-16 7.178-16 16-16z" />
+                      )}
                     </svg>
                   </div>
                 </div>
 
-                <div class="flex flex-wrap items-center justify-between gap-4">
-                  <div class="flex items-center">
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex items-center">
                     <input
                       id="remember-me"
                       name="remember-me"
                       type="checkbox"
-                      class="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      className="h-4 w-4 shrink-0 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
                     />
                     <label
-                      for="remember-me"
-                      class="ml-3 block text-sm text-gray-800"
+                      htmlFor="remember-me"
+                      className="ml-3 block text-sm text-gray-800"
                     >
                       Remember me
                     </label>
                   </div>
-                  <div class="text-sm">
+                  <div className="text-sm">
                     <Link
                       href="/"
-                      class="text-blue-600 hover:underline font-semibold"
+                      className="text-purple-600 hover:underline font-semibold"
                     >
                       Forgot your password?
                     </Link>
                   </div>
                 </div>
 
-                <div class="!mt-8">
+                <div className="!mt-8">
                   <button
-                    type="button"
-                    class="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
+                    type="submit"
+                    className="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-purple-600 hover:bg-purple-700 focus:outline-none"
                   >
                     Login
                   </button>
                 </div>
-                <p class="text-gray-800 text-sm !mt-8 text-center">
+                <p className="text-gray-800 text-sm !mt-8 text-center">
                   Don&apos;t have an account?{" "}
                   <Link
-                    href="/register"
-                    class="text-blue-600 hover:underline ml-1 whitespace-nowrap font-semibold"
+                    href={"/register"}
+                    className="text-purple-600 hover:underline ml-1 whitespace-nowrap font-semibold"
                   >
                     Register here
                   </Link>
