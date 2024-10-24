@@ -123,7 +123,6 @@ const Navbar = () => {
               stroke="currentColor"
               className="size-7 transition-colors duration-200 hover:stroke-purple-500"
             >
-              <title>Switch to Light Mode</title>
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -139,7 +138,6 @@ const Navbar = () => {
               stroke="currentColor"
               className="size-7 transition-colors duration-200 hover:stroke-purple-500"
             >
-              <title>Switch to Dark Mode</title>
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"

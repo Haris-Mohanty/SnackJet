@@ -22,10 +22,10 @@ const Login = () => {
 
   return (
     <>
-      <div className="bg-gray-50 font-[sans-serif]">
+      <div className="bg-gray-50 dark:bg-gray-900 font-[sans-serif]">
         <div className="flex flex-col items-center justify-center py-6 px-4">
           <div className="max-w-md w-full">
-            <div className="p-6 md:p-10 rounded-2xl bg-white shadow-lg">
+            <div className="p-6 md:p-10 rounded-2xl bg-white dark:bg-gray-800 shadow-lg">
               <Link href="/">
                 <Image
                   src={"/logo.png"}
@@ -35,12 +35,12 @@ const Login = () => {
                   className="mb-8 mx-auto block"
                 />
               </Link>
-              <h2 className="text-gray-600 text-center text-2xl font-bold">
+              <h2 className="text-gray-600 dark:text-white text-center text-2xl font-bold">
                 Login Form
               </h2>
               <form onSubmit={handleLogin} className="mt-4 md:mt-8 space-y-4">
                 <div>
-                  <label className="text-gray-800 text-sm mb-2 block">
+                  <label className="text-gray-800 dark:text-white text-sm mb-2 block">
                     Email
                   </label>
                   <div className="relative flex items-center">
@@ -48,7 +48,7 @@ const Login = () => {
                       name="email"
                       type="text"
                       required
-                      className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
+                      className="w-full text-gray-800 dark:text-white text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
                       placeholder="Enter Email"
                       value={data.email}
                       onChange={handleChange}
@@ -57,7 +57,7 @@ const Login = () => {
                 </div>
 
                 <div>
-                  <label className="text-gray-800 text-sm mb-2 block">
+                  <label className="text-gray-800 dark:text-white text-sm mb-2 block">
                     Password
                   </label>
                   <div className="relative flex items-center">
@@ -65,7 +65,7 @@ const Login = () => {
                       name="password"
                       type={showPassword ? "text" : "password"}
                       required
-                      className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
+                      className="w-full text-gray-800 dark:text-white text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
                       placeholder="Enter password"
                       value={data.password}
                       onChange={handleChange}
@@ -102,7 +102,7 @@ const Login = () => {
                     />
                     <label
                       htmlFor="remember-me"
-                      className="ml-3 block text-sm text-gray-800"
+                      className="ml-3 block text-sm text-gray-800 dark:text-white"
                     >
                       Remember me
                     </label>
@@ -125,7 +125,7 @@ const Login = () => {
                     Login
                   </button>
                 </div>
-                <p className="text-gray-800 text-sm !mt-8 text-center">
+                <p className="text-gray-800 dark:text-white text-sm !mt-8 text-center">
                   Don&apos;t have an account?{" "}
                   <Link
                     href={"/register"}

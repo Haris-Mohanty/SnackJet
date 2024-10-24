@@ -22,10 +22,10 @@ const Register = () => {
 
   return (
     <>
-      <div className="bg-gray-50 font-[sans-serif] dark:bg-gray-900">
+      <div className="bg-gray-50 dark:bg-gray-900 font-[sans-serif]">
         <div className="flex flex-col items-center justify-center py-4 px-4">
           <div className="max-w-md w-full">
-            <div className="p-6 md:p-8 rounded-2xl bg-white shadow-lg">
+            <div className="p-6 md:p-8 rounded-2xl bg-white dark:bg-gray-800 shadow-lg">
               <Link href="/">
                 <Image
                   src={"/logo.png"}
@@ -35,7 +35,7 @@ const Register = () => {
                   className="mb-8 mx-auto block"
                 />
               </Link>
-              <h2 className="text-gray-600 text-center text-2xl font-bold">
+              <h2 className="text-gray-600 dark:text-white text-center text-2xl font-bold">
                 Register Form
               </h2>
               <form
@@ -43,7 +43,7 @@ const Register = () => {
                 className="mt-4 md:mt-8 space-y-4"
               >
                 <div>
-                  <label className="text-gray-800 text-sm mb-2 block">
+                  <label className="text-gray-800 dark:text-white text-sm mb-2 block">
                     Name
                   </label>
                   <div className="relative flex items-center">
@@ -51,7 +51,7 @@ const Register = () => {
                       name="name"
                       type="text"
                       required
-                      className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
+                      className="w-full text-gray-800 dark:text-white text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
                       placeholder="Enter Full Name"
                       value={data.name}
                       onChange={handleChange}
@@ -60,7 +60,7 @@ const Register = () => {
                 </div>
 
                 <div>
-                  <label className="text-gray-800 text-sm mb-2 block">
+                  <label className="text-gray-800 dark:text-white text-sm mb-2 block">
                     Email
                   </label>
                   <div className="relative flex items-center">
@@ -68,7 +68,7 @@ const Register = () => {
                       name="email"
                       type="email"
                       required
-                      className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
+                      className="w-full text-gray-800 dark:text-white text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
                       placeholder="Enter Email"
                       value={data.email}
                       onChange={handleChange}
@@ -77,7 +77,7 @@ const Register = () => {
                 </div>
 
                 <div>
-                  <label className="text-gray-800 text-sm mb-2 block">
+                  <label className="text-gray-800 dark:text-white text-sm mb-2 block">
                     Password
                   </label>
                   <div className="relative flex items-center">
@@ -85,7 +85,7 @@ const Register = () => {
                       name="password"
                       type={showPassword ? "text" : "password"} // Toggle input type
                       required
-                      className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
+                      className="w-full text-gray-800 dark:text-white text-sm border border-gray-300 px-4 py-3 rounded-md outline-purple-600"
                       placeholder="Enter password"
                       value={data.password}
                       onChange={handleChange}
@@ -123,7 +123,7 @@ const Register = () => {
                     />
                     <label
                       htmlFor="remember-me"
-                      className="ml-3 block text-sm text-gray-800"
+                      className="ml-3 block text-sm text-gray-800 dark:text-white"
                     >
                       I accept the{" "}
                       <Link
@@ -144,7 +144,7 @@ const Register = () => {
                     Register
                   </button>
                 </div>
-                <p className="text-gray-800 text-sm !mt-4 md:!mt-6 text-center">
+                <p className="text-gray-800 dark:text-white text-sm !mt-4 md:!mt-6 text-center">
                   Already have an account?
                   <Link
                     href="/login"
