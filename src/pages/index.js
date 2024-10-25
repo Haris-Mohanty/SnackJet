@@ -1,5 +1,7 @@
-import About from "@/components/Layouts/About";
-import Hero from "@/components/Layouts/Hero";
+import About from "@/components/About";
+import FoodItems from "@/components/FoodItems";
+import Hero from "@/components/Hero";
+
 
 export default function Home() {
   return (
@@ -7,6 +9,7 @@ export default function Home() {
       <div>
         <Hero />
         <About />
+        <FoodItems />
       </div>
     </>
   );
