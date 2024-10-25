@@ -34,7 +34,7 @@ const About = () => {
       {/* Text Section */}
       <div className="lg:ml-16 mt-10 lg:mt-0 lg:w-1/2 text-left">
         <h2
-          className={`${pacifico.className} text-2xl lg:text-3xl text-purple-500 mb-4`}
+          className={`${pacifico.className} text-2xl lg:text-3xl text-purple-500 mb-4 mt-4 md:mt-0`}
         >
           Welcome to our Restaurant
         </h2>

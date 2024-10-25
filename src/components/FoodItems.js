@@ -11,7 +11,8 @@ const FoodItems = () => {
       id: 1,
       label: "NEW",
       title: "Garlic Burger",
-      description: "It is a long established fact that a reader will be distracted by the readable content",
+      description:
+        "It is a long established fact that a reader will be distracted by the readable content",
       price: 180,
       rating: 4.5,
       imgSrc: "/garlic-burger.jpg",
@@ -20,7 +21,8 @@ const FoodItems = () => {
       id: 2,
       label: "HOT",
       title: "Baked Chicken Wings and Legs",
-      description: "It is a long established fact that a reader will be distracted by the readable content",
+      description:
+        "It is a long established fact that a reader will be distracted by the readable content",
       price: 1500,
       rating: 4.5,
       imgSrc: "/chicken-wings.jpg",
@@ -29,7 +31,8 @@ const FoodItems = () => {
       id: 3,
       label: "NEW",
       title: "Vegetable Pizza",
-      description: "It is a long established fact that a reader will be distracted by the readable content",
+      description:
+        "It is a long established fact that a reader will be distracted by the readable content",
       price: 170,
       rating: 4.5,
       imgSrc: "/vegetable-pizza.jpg",
@@ -66,28 +69,38 @@ const FoodItems = () => {
   const itemsPerPage = 4;
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Handle next button
   const handleNext = () => {
     if (currentIndex < Math.ceil(foodData.length / itemsPerPage) - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
 
+  // Handle prev button
   const handlePrev = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prevIndex) => prevIndex - 1);
     }
   };
 
-  const currentItems = foodData.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage);
+  // Get current items
+  const currentItems = foodData.slice(
+    currentIndex * itemsPerPage,
+    (currentIndex + 1) * itemsPerPage
+  );
 
   return (
     <section className="bg-gray-100 dark:bg-gray-900 py-8 px-8 lg:px-16">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h2 className={`${pacifico.className} text-purple-500 text-3xl font-bold`}>
+          <h2
+            className={`${pacifico.className} text-purple-500 text-3xl font-bold`}
+          >
             Food Items
           </h2>
-          <h3 className="text-2xl font-semibold dark:text-gray-100 mt-2">
+          <h3
+            className={`${inter.className} text-lg md:text-2xl font-semibold dark:text-gray-100 mt-2`}
+          >
             Our Popular Foods
           </h3>
         </div>
@@ -98,26 +111,59 @@ const FoodItems = () => {
             disabled={currentIndex === 0}
             className="p-2 hover:scale-110 hover:text-purple-500 transition duration-300"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`h-10 w-10 ${currentIndex === 0 ? "text-gray-500" : ""}`}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className={`h-10 w-10  dark:text-gray-300 ${
+                currentIndex === 0 ? "text-gray-500" : ""
+              }`}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
             </svg>
           </button>
           {/* Right Arrow */}
           <button
             onClick={handleNext}
-            disabled={currentIndex >= Math.ceil(foodData.length / itemsPerPage) - 1}
+            disabled={
+              currentIndex >= Math.ceil(foodData.length / itemsPerPage) - 1
+            }
             className="p-2 hover:scale-110 hover:text-purple-500 transition duration-300"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`h-10 w-10 ${currentIndex >= Math.ceil(foodData.length / itemsPerPage) - 1 ? "text-gray-500" : ""}`}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className={`h-10 w-10  dark:text-gray-300 ${
+                currentIndex >= Math.ceil(foodData.length / itemsPerPage) - 1
+                  ? "text-gray-500"
+                  : ""
+              }`}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
             </svg>
           </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative mt-24">
-        {currentItems.map(item => (
-          <div key={item.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden h-[400px] w-[320px] flex flex-col">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative md:mt-24">
+        {currentItems.map((item) => (
+          <div
+            key={item.id}
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden h-[470px] md:h-[400px] w-[320px] flex flex-col"
+          >
             {/* Label */}
             <span className="top-14 bg-purple-500 text-white text-xs px-3 py-1 rounded-md z-20 absolute">
               {item.label}
@@ -130,7 +176,7 @@ const FoodItems = () => {
                 alt={item.title}
                 height={120}
                 width={120}
-                className="w-60 h-60 object-cover rounded-full absolute -top-16"
+                className="w-56 h-56 md:h-60 md:w-60 object-cover rounded-full md:absolute md:-top-16"
               />
             </div>
 
@@ -185,10 +231,7 @@ const FoodItems = () => {
 
               {/* Price */}
               <div className="text-lg text-left font-semibold mt-4 text-gray-800 dark:text-gray-100">
-                Price:{" "}
-                <span className="text-purple-500">
-                  {item.price}
-                </span>
+                Price: <span className="text-purple-500">{item.price}</span>
               </div>
 
               {/* Add to Cart Button */}
