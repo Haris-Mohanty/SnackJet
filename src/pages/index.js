@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Faq from "@/components/Faq";
 import FoodItems from "@/components/FoodItems";
 import Hero from "@/components/Hero";
 import Strength from "@/components/Strength";
@@ -13,6 +14,7 @@ export default function Home() {
         <FoodItems />
         <Strength />
         <Testimonial />
+        <Faq />
       </div>
     </>
   );
