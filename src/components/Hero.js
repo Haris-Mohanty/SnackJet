@@ -10,7 +10,7 @@ const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
 const Hero = () => {
   return (
     <>
-      <section className="bg-gray-100 dark:bg-gray-900 py-4 px-8 flex flex-col lg:flex-row items-center justify-between transition duration-300">
+      <section className="bg-gray-50 dark:bg-gray-900 py-4 px-8 flex flex-col lg:flex-row items-center justify-between transition duration-300">
         {/* Text Section */}
         <div className="max-w-lg text-left lg:ml-16">
           <h3

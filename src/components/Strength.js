@@ -22,15 +22,15 @@ const Strength = () => {
         </h3>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
         {/* Card 1 */}
-        <div className="bg-white dark:bg-gray-800 p-4 md:p-8 shadow-lg rounded-lg border-4 border-purple-500 transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+        <div className="p-4 md:p-8 border-2 md:border-0 md:border-l-4 md:border-b-4 border-purple-500">
           <div className="flex justify-center mb-6">
             <Image
               src="/quality-food-icon.png"
               alt="Quality Foods"
-              width={150}
-              height={150}
+              width={180}
+              height={180}
             />
           </div>
           <h4 className="text-purple-500 text-lg md:text-xl font-semibold text-center">
@@ -45,13 +45,13 @@ const Strength = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white dark:bg-gray-800 p-8 shadow-lg rounded-lg border-4 border-purple-500 transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+        <div className="p-4 md:p-8 border-2 md:border-0 md:border-l-4 md:border-t-4 border-purple-500">
           <div className="flex justify-center mb-6">
             <Image
               src="/easy-order-icon.png"
               alt="Easy to Order"
-              width={150}
-              height={150}
+              width={180}
+              height={180}
             />
           </div>
           <h4 className="text-purple-500 text-lg md:text-xl font-semibold text-center">
@@ -65,13 +65,13 @@ const Strength = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white dark:bg-gray-800 p-8 shadow-lg rounded-lg border-4 border-purple-500 transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+        <div className="p-4 md:p-8 border-2 md:border-0 md:border-l-4 md:border-b-4 md:border-r-4 border-purple-500">
           <div className="flex justify-center mb-6">
             <Image
               src="/delivery-icon.png"
               alt="On Time Delivery"
-              width={150}
-              height={150}
+              width={180}
+              height={180}
             />
           </div>
           <h4 className="text-purple-500 text-lg md:text-xl font-semibold text-center">
