@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { Pacifico, Inter } from "@next/font/google";
-
-const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
-const inter = Inter({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 const FoodItems = () => {
   const foodData = [
@@ -93,13 +89,9 @@ const FoodItems = () => {
     <section className="bg-gray-100 dark:bg-gray-900 py-8 px-8 lg:px-16">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h2
-            className={`${pacifico.className} text-purple-500 text-3xl font-bold`}
-          >
-            Food Items
-          </h2>
+          <h2 className="text-purple-500 text-3xl font-bold pacifico">Food Items</h2>
           <h3
-            className={`${inter.className} text-lg md:text-2xl font-semibold dark:text-gray-100 mt-2`}
+            className='text-lg md:text-2xl font-semibold dark:text-gray-100 mt-2'
           >
             Our Popular Foods
           </h3>
@@ -230,8 +222,8 @@ const FoodItems = () => {
               </p>
 
               {/* Price */}
-              <div className="text-lg text-left font-semibold mt-4 text-gray-800 dark:text-gray-100">
-                Price: <span className="text-purple-500">{item.price}</span>
+              <div className="text-lg text-left font-medium mt-2 text-gray-800 dark:text-gray-100">
+                Price: <span className="text-purple-500 pacifico text-xl">{item.price}</span>
               </div>
 
               {/* Add to Cart Button */}

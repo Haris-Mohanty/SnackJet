@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className="container mx-auto p-0 md:p-8 xl:px-0">
+        <div className="dark:bg-gray-800 container mx-auto p-0 md:p-8 xl:px-0">
           <div className="mx-auto max-w-7xl px-6 pb-10 pt-16">
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">
               <div className="space-y-4">
@@ -24,7 +24,7 @@ const Footer = () => {
                     </div>
                   </Link>
                 </div>
-                <div className="max-w-md pr-16 text-md text-gray-400">
+                <div className="max-w-md pr-16 text-md text-gray-400 dark:text-gray-300">
                   Fast, fresh, and convenient! Your favorite meals delivered to
                   your door in record time, no matter the craving.
                 </div>
@@ -32,7 +32,7 @@ const Footer = () => {
                   <a
                     href
                     target="_blank"
-                    className="text-gray-400 hover:text-gray-500 cursor-pointer"
+                    className="text-gray-400 dark:text-gray-300 hover:text-gray-500 cursor-pointer"
                   >
                     <span className="sr-only">Linkedin</span>
                     <svg
@@ -51,7 +51,7 @@ const Footer = () => {
                   <a
                     href
                     target="_blank"
-                    className="text-gray-400 hover:text-gray-500 cursor-pointer"
+                    className="text-gray-400 dark:text-gray-300 hover:text-gray-500 cursor-pointer"
                   >
                     <span className="sr-only">Twitter</span>
                     <svg
@@ -68,14 +68,14 @@ const Footer = () => {
               <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
                 <div className="md:grid md:grid-cols-2 md:gap-8">
                   <div>
-                    <h3 className="text-md font-semibold leading-6 ">
+                    <h3 className="text-md font-semibold leading-6 dark:text-gray-200">
                       Our Services
                     </h3>
                     <ul role="list" className="mt-6 space-y-4">
                       <li>
                         <Link
                           href="/delivery"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Food Delivery
                         </Link>
@@ -83,7 +83,7 @@ const Footer = () => {
                       <li>
                         <Link
                           href="/catering"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Catering
                         </Link>
@@ -91,7 +91,7 @@ const Footer = () => {
                       <li>
                         <Link
                           href="/group-orders"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Group Orders
                         </Link>
@@ -99,14 +99,14 @@ const Footer = () => {
                     </ul>
                   </div>
                   <div className="mt-10 md:mt-0">
-                    <h3 className="text-md font-semibold leading-6 ">
+                    <h3 className="text-md font-semibold leading-6 dark:text-gray-200">
                       Popular Cuisines
                     </h3>
                     <ul role="list" className="mt-6 space-y-4">
                       <li>
                         <Link
                           href="/italian"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Italian
                         </Link>
@@ -114,7 +114,7 @@ const Footer = () => {
                       <li>
                         <Link
                           href="/mexican"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Mexican
                         </Link>
@@ -122,7 +122,7 @@ const Footer = () => {
                       <li>
                         <Link
                           href="/asian"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Asian
                         </Link>
@@ -132,14 +132,14 @@ const Footer = () => {
                 </div>
                 <div className="md:grid md:grid-cols-2 md:gap-8">
                   <div>
-                    <h3 className="text-md font-semibold leading-6 ">
+                    <h3 className="text-md font-semibold leading-6 dark:text-gray-200">
                       Support
                     </h3>
                     <ul role="list" className="mt-6 space-y-4">
                       <li>
                         <Link
                           href="/help"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Help Center
                         </Link>
@@ -147,7 +147,7 @@ const Footer = () => {
                       <li>
                         <Link
                           href="/terms"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Terms of Service
                         </Link>
@@ -155,7 +155,7 @@ const Footer = () => {
                       <li>
                         <Link
                           href="/privacy"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Privacy Policy
                         </Link>
@@ -163,14 +163,14 @@ const Footer = () => {
                     </ul>
                   </div>
                   <div className="mt-10 md:mt-0">
-                    <h3 className="text-md font-semibold leading-6 ">
+                    <h3 className="text-md font-semibold leading-6 dark:text-gray-200">
                       Company
                     </h3>
                     <ul role="list" className="mt-6 space-y-4">
                       <li>
                         <Link
                           href="/about"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           About Us
                         </Link>
@@ -178,7 +178,7 @@ const Footer = () => {
                       <li>
                         <Link
                           href="/careers"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Careers
                         </Link>
@@ -186,7 +186,7 @@ const Footer = () => {
                       <li>
                         <Link
                           href="/contact"
-                          className="text-md leading-6 text-gray-400 hover:text-gray-500"
+                          className="text-md leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-300"
                         >
                           Contact Us
                         </Link>
@@ -197,7 +197,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="mt-16 border-t border-gray-400/30 pt-8 sm:mt-20 lg:mt-24">
-              <div className="text-md text-center ">
+              <div className="text-md text-center dark:text-gray-200">
                 Copyright © 2025 | All rights reserved by SnackJet.
               </div>
             </div>

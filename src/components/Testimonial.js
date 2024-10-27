@@ -1,10 +1,5 @@
 import React from "react";
-import { Pacifico, Inter } from "@next/font/google";
 import Image from "next/image";
-
-// Custom fonts
-const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
-const inter = Inter({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 const testimonials = [
   {
@@ -76,12 +71,12 @@ const Testimonial = () => {
 
       <div className="text-center mb-8 md:mb-12">
         <h2
-          className={`${pacifico.className} text-purple-500 text-2xl md:text-4xl`}
+          className='text-purple-500 text-2xl md:text-4xl pacifico'
         >
           Testimonial
         </h2>
         <h3
-          className={`${inter.className} text-lg md:text-3xl mt-2 font-bold dark:text-gray-300`}
+          className='text-lg md:text-3xl mt-2 font-bold dark:text-gray-300'
         >
           Our Customer Feedback
         </h3>

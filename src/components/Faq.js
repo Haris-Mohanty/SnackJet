@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import { Pacifico, Inter } from "@next/font/google";
 import Image from "next/image";
-
-// Custom fonts
-const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
-const inter = Inter({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -18,12 +13,10 @@ const Faq = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-12">
         {/* FAQ Content */}
         <div className="lg:w-1/2 space-y-4">
-          <h2
-            className={`${pacifico.className} text-purple-500 text-2xl md:text-4xl`}
-          >
+          <h2 className="text-purple-500 text-2xl md:text-4xl pacifico">
             Frequently Asked Questions
           </h2>
-          <p className={`${inter.className} text-gray-600 dark:text-gray-300 text-sm md:text-base mt-2`}>
+          <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base mt-2">
             Find answers to common questions about our services, policies, and
             how to make the most of what we offer.
           </p>
@@ -47,9 +40,9 @@ const Faq = () => {
                 }`}
               >
                 <div className="px-4 pb-4 text-gray-600 dark:text-gray-300 text-sm md:text-base">
-                  To create an account, click on the &lsquo;Login&lsquo;
-                  button on the top menu, fill in the required information, and
-                  submit the form.
+                  To create an account, click on the &lsquo;Login&lsquo; button
+                  on the top menu, fill in the required information, and submit
+                  the form.
                 </div>
               </div>
             </div>

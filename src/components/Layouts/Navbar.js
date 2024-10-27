@@ -35,7 +35,7 @@ const Navbar = () => {
             className="ml-2 md:ml-6 w-40 md:w-52"
           />
         </Link>
-        <nav className="ml-4 md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <nav className="ml-2 md:ml-auto flex flex-wrap items-center text-base justify-center">
           {isLoggedIn ? (
             <>
               <Link

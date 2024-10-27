@@ -35,7 +35,7 @@ const Login = () => {
                   className="mb-8 mx-auto block"
                 />
               </Link>
-              <h2 className="text-gray-600 dark:text-white text-center text-2xl font-bold">
+              <h2 className="text-purple-500 text-center text-2xl font-medium pacifico">
                 Login Form
               </h2>
               <form onSubmit={handleLogin} className="mt-4 md:mt-8 space-y-4">

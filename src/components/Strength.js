@@ -1,22 +1,17 @@
 import React from "react";
-import { Pacifico, Inter } from "@next/font/google";
 import Image from "next/image";
-
-// Custom fonts
-const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
-const inter = Inter({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 const Strength = () => {
   return (
     <section className="bg-gray-50 dark:bg-gray-900 py-12 px-8 lg:px-16">
       <div className="text-center mb-12">
         <h2
-          className={`${pacifico.className} text-purple-500 text-2xl md:text-4xl`}
+          className='text-purple-500 text-2xl md:text-4xl pacifico'
         >
           Our Strength
         </h2>
         <h3
-          className={`${inter.className} text-xl md:text-3xl mt-2 font-bold dark:text-gray-300`}
+          className='text-xl md:text-3xl mt-2 font-bold dark:text-gray-300'
         >
           Why we are the Best?
         </h3>
@@ -31,6 +26,7 @@ const Strength = () => {
               alt="Quality Foods"
               width={180}
               height={180}
+              priority
             />
           </div>
           <h4 className="text-purple-500 text-lg md:text-xl font-semibold text-center">
@@ -52,6 +48,7 @@ const Strength = () => {
               alt="Easy to Order"
               width={180}
               height={180}
+              priority
             />
           </div>
           <h4 className="text-purple-500 text-lg md:text-xl font-semibold text-center">
@@ -72,6 +69,7 @@ const Strength = () => {
               alt="On Time Delivery"
               width={180}
               height={180}
+              priority
             />
           </div>
           <h4 className="text-purple-500 text-lg md:text-xl font-semibold text-center">

@@ -1,9 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Pacifico, Inter } from "@next/font/google";
-
-const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
-const inter = Inter({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 const About = () => {
   return (
@@ -15,8 +11,8 @@ const About = () => {
           <Image
             src="/about-1.jpg"
             alt="Chef in the kitchen"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
           />
         </div>
 
@@ -25,34 +21,28 @@ const About = () => {
           <Image
             src="/about-2.jpg"
             alt="Happy diner"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
           />
         </div>
       </div>
 
       {/* Text Section */}
       <div className="lg:ml-16 mt-10 lg:mt-0 lg:w-1/2 text-left">
-        <h2
-          className={`${pacifico.className} text-2xl lg:text-3xl text-purple-500 mb-4 mt-4 md:mt-0`}
-        >
+        <h2 className="text-2xl lg:text-3xl text-purple-500 mb-4 mt-4 md:mt-0 pacifico">
           Welcome to our Restaurant
         </h2>
-        <h3
-          className={`${inter.className} text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100`}
-        >
+        <h3 className="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">
           About Us
         </h3>
-        <p
-          className={`${inter.className} text-gray-600 dark:text-gray-300 text-base lg:text-lg mb-6`}
-        >
+        <p className="text-gray-600 dark:text-gray-300 text-base lg:text-lg mb-6">
           At our restaurant, we believe in crafting unforgettable dining
           experiences. Whether you&apos;re joining us for a quick bite or a
           special celebration, we are dedicated to serving meals that delight
           both the eyes and the palate.
         </p>
         <p
-          className={`${inter.className} text-gray-600 dark:text-gray-300 text-base lg:text-lg mb-8`}
+          className={` text-gray-600 dark:text-gray-300 text-base lg:text-lg mb-8`}
         >
           Our chefs use only the freshest ingredients, blending traditional
           techniques with modern flavors to bring you dishes that are as unique
