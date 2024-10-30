@@ -10,13 +10,13 @@ const Hero = () => {
           <h3 className="text-purple-500 dark:text-purple-400 text-xl md:text-2xl font-semibold mb-2 pacifico">
             Fast, Fresh, and Convenient!
           </h3>
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-800 dark:text-gray-100">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-800 dark:text-gray-100 montserrat">
             Your Favorite Meals,{" "}
             <span className="text-purple-500 lg:text-4xl dark:text-purple-400">
               Delivered to Your Door!
             </span>
           </h1>
-          <p className="text-gray-500 text-sm md:text-base dark:text-gray-300 mb-8">
+          <p className="text-gray-500 text-sm md:text-base dark:text-gray-300 mb-8 open-sans">
             Whether it&apos;s a quick snack or a hearty meal, we bring your
             cravings to life with delicious, freshly made dishes. Delivered in
             record time to satisfy your appetite without the wait. From burgers

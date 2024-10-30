@@ -32,10 +32,10 @@ const About = () => {
         <h2 className="text-2xl lg:text-3xl text-purple-500 mb-4 mt-4 md:mt-0 pacifico">
           Welcome to our Restaurant
         </h2>
-        <h3 className="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+        <h3 className="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100 montserrat">
           About Us
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 text-base lg:text-lg mb-6">
+        <p className="text-gray-600 dark:text-gray-300 text-base lg:text-lg mb-6 open-sans">
           At our restaurant, we believe in crafting unforgettable dining
           experiences. Whether you&apos;re joining us for a quick bite or a
           special celebration, we are dedicated to serving meals that delight

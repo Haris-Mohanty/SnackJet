@@ -89,10 +89,10 @@ const FoodItems = () => {
     <section className="bg-gray-100 dark:bg-gray-900 py-8 px-8 lg:px-16">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h2 className="text-purple-500 text-3xl font-bold pacifico">Food Items</h2>
-          <h3
-            className='text-lg md:text-2xl font-semibold dark:text-gray-100 mt-2'
-          >
+          <h2 className="text-purple-500 text-3xl font-bold pacifico">
+            Food Items
+          </h2>
+          <h3 className="text-lg md:text-2xl font-semibold dark:text-gray-100 mt-2 montserrat">
             Our Popular Foods
           </h3>
         </div>
@@ -154,7 +154,7 @@ const FoodItems = () => {
         {currentItems.map((item) => (
           <div
             key={item.id}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden h-[470px] md:h-[400px] w-[320px] flex flex-col"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden h-[470px] md:h-[400px] w-[320px] flex flex-col hover:shadow-xl"
           >
             {/* Label */}
             <span className="top-14 bg-purple-500 text-white text-xs px-3 py-1 rounded-md z-20 absolute">
@@ -166,8 +166,8 @@ const FoodItems = () => {
               <Image
                 src={item.imgSrc}
                 alt={item.title}
-                height={120}
-                width={120}
+                height={450}
+                width={450}
                 className="w-56 h-56 md:h-60 md:w-60 object-cover rounded-full md:absolute md:-top-16"
               />
             </div>
@@ -217,13 +217,16 @@ const FoodItems = () => {
               </h4>
 
               {/* Description */}
-              <p className="text-sm text-left text-gray-600 dark:text-gray-300 mt-2 text-ellipsis line-clamp-2">
+              <p className="text-sm text-left text-gray-600 dark:text-gray-300 mt-2 text-ellipsis line-clamp-2 open-sans">
                 {item.description}
               </p>
 
               {/* Price */}
               <div className="text-lg text-left font-medium mt-2 text-gray-800 dark:text-gray-100">
-                Price: <span className="text-purple-500 pacifico text-xl">{item.price}</span>
+                Price:{" "}
+                <span className="text-purple-500 pacifico text-xl">
+                  {item.price}
+                </span>
               </div>
 
               {/* Add to Cart Button */}
